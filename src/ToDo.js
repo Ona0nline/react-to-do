@@ -72,7 +72,20 @@ function toggleComplete(index) {
 
   // Update the state with the new array
   setTaskList(updatedTasks);
+  
+  const completedTask = taskList[index];
+
+  // Remove the completed task from the could category
+  setCould(could.filter((task) => task !== completedTask));
+
+  // Remove the completed task from the should category
+  setShould(should.filter((task) => task !== completedTask));
+
+  // Remove the completed task from the must category
+  setMust(must.filter((task) => task !== completedTask));
 }
+
+
 // -----------------------------------------------------------------------------------------------
 
   function handleSelect(event, index){
@@ -144,13 +157,13 @@ function toggleComplete(index) {
         <div className="container">
           <div className="row">
             <div className="col-md-3">
-              <ViewTasks title="I Could" tasks={could || []} />
+              <ViewTasks className="could" title="I Could (Tasks you could do but don't have to)" tasks={could || []} />
             </div>
             <div className="col-md-3">
-              <ViewTasks title="I Should" tasks={should || []} />
+              <ViewTasks title="I Should (Tasks you should probably do and it will be bad if you don't)" tasks={should || []} />
             </div>
             <div className="col-md-3">
-               <ViewTasks title="I Must" tasks={must || []} />
+               <ViewTasks title="I Must (Tasks you absolutely have to do)" tasks={must || []} />
             </div>
           </div>
          
