@@ -140,8 +140,8 @@ function toggleComplete(index) {
             <option value="should">I Should</option>
             <option value="must">I Must</option>
           </select>
-        <button onClick={getHandleRemove(index)} className="removeBtn"><Remove/></button>
-        <button onClick={() => toggleComplete(index)} className="completeBtn"><Check/></button>
+        <button onClick={getHandleRemove(index)} className="removeBtn">Remove<Remove/></button>
+        <button onClick={() => toggleComplete(index)} className="completeBtn">Completed<Check/></button>
                 </div>
         
               </li>
@@ -157,7 +157,7 @@ function toggleComplete(index) {
         <div className="container">
           <div className="row">
             <div className="col-md-3">
-              <ViewTasks className="could" title="I Could (Tasks you could do but don't have to)" tasks={could || []} />
+              <ViewTasks title="I Could (Tasks you could do but don't have to)" tasks={could || []} />
             </div>
             <div className="col-md-3">
               <ViewTasks title="I Should (Tasks you should probably do and it will be bad if you don't)" tasks={should || []} />
