@@ -19,6 +19,7 @@ export default function ToDo(){
 
 
   function handleSubmit(event){
+    
     event.preventDefault();
      if (task.trim() !== "") {
       // Remember the trailing ellipsis allow you to append a list
@@ -111,15 +112,24 @@ function toggleComplete(index) {
 
   return (<div>
     <h1>DoodleDo</h1>
+
+   
     
     <h3>Your favourite To-do list app</h3>
+    
+     <p className="instructions">Upon adding a task, please select a category to help us organize your tasks in order of importance.<br/>
+      The dustbin icon will remove a task and the tick icon will strike it through, marking it as complete and removing it
+      from it's selected category<br/>
+      The 'View tasks by category' button displays your tasks sorted in order of importance.<br/>
+      Happy Planning!</p>
+
     <form onSubmit={handleSubmit}>
       <input className="taskInput" onChange={handleNewTask} value={task} type="text" placeholder="Task" />
       <input className="descriptionInput" onChange={handleNewDescription} type="text" value={description} placeholder="Description"/>
       <input  className="taskSubmit" type="submit" value="Add task"/>
     </form>
     
-    <ol>
+    <ul>
     {taskList.map(function(taskItem,index){
       return <div key={index}>
         <li className="list" key={index}  style={{
@@ -148,7 +158,7 @@ function toggleComplete(index) {
 
         </div>
     })}
-    </ol>
+    </ul>
 
     <button className="viewCategory" onClick={handleShowCategory}> {showCategory ? "Hide Categories" : "View Tasks by Category"}</button>
 
