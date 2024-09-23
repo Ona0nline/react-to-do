@@ -1,0 +1,174 @@
+:root{
+  --Snow:#F6EFEE;
+  --Touch-of-pink:#E1AFA1;
+  --Tea-green: #CCE8CC;
+  --Scarlet:#D62411;
+  --Plum-web:#E396DF;
+  --Rose-pink:#E365C1;
+  --Pink-lavender:#E365C1;
+}
+
+@font-face {
+  font-family: "VTKS";
+  src: url(./assets/fonts/VTKS\ EASY\ WAY.ttf);
+  font-family: "FifthGrader";
+  src: url(./assets/fonts/Fifth-Grader.ttf);
+}
+
+body{
+  background-color: #104911;
+}
+
+h1{
+  color: #A8D5E2;
+  font-family: "FifthGrader";
+  font-size:100px;
+  margin-bottom: 0;
+}
+
+h3{
+  color: #FFD449;
+  font-family: "FifthGrader";
+  font-weight:100;
+}
+
+button{
+  background-color: var(--Touch-of-pink)
+}
+
+.taskSubmit{
+  background-color: var(--Rose-pink);
+    color: var(--Snow);
+  border: 2px solid var(--Pink-lavender);
+  border-radius: 14px;
+  padding:8px 16px;
+  margin-left:12px;
+  font-size: 14px;
+  /* font-weight: 900; */
+  /* font-family: "FifthGrader" */
+}
+
+.removeBtn,.completeBtn{
+  background-color: var(--Rose-pink);
+    color: var(--Snow);
+    border: 2px solid var(--Pink-lavender);
+    border-radius: 20px;
+    padding: 4px 20px;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.editBtn{
+  background-color: var(--Rose-pink);
+    color: var(--Snow);
+    border: 2px solid var(--Pink-lavender);
+    border-radius: 20px;
+    padding: 4px 20px;
+    margin-right: 12px;
+    margin-left: 52px;
+    font-size: 14px;
+}
+
+.viewCategory{
+  background-color: var(--Rose-pink);
+    color: var(--Snow);
+    border: 2px solid var(--Pink-lavender);
+    border-radius: 20px;
+    padding: 4px 20px;
+    margin-right: 12px;
+    margin-left: 52px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.taskInput{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.descriptionInput{
+  margin-left: 12px;
+  padding:4px;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width:260px;
+  padding: 4px;
+  text-align: center;
+}
+
+.list{
+  margin-bottom: 30px;
+}
+
+li{
+  margin-top: 30px;
+  color: var(--Snow) !important;
+  width:410px;
+  text-align: center;
+
+}
+
+select{
+  padding: 6px 12px;
+}
+
+.buttonsDiv {
+  margin-top: 10px;
+}
+
+@media (max-width:900px) {
+
+  .taskInput {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      width:80px;
+    }
+
+  .descriptionInput {
+      margin-top: 30px;
+      padding: 4px;
+      border: none;
+      border-radius: 10px;
+      height: 50px;
+      width: 200px;
+      padding: 4px;
+      text-align: center;
+    }
+
+    .taskSubmit {
+      background-color: var(--Rose-pink);
+      color: var(--Snow);
+      border: 2px solid var(--Pink-lavender);
+      border-radius: 14px;
+      padding: 8px 16px;
+      margin-left: 12px;
+      font-size: 14px;
+      margin-top: 26px;
+    }
+
+    .editBtn {
+      background-color: var(--Rose-pink);
+      color: var(--Snow);
+      border: 2px solid var(--Pink-lavender);
+      border-radius: 20px;
+      padding: 4px 20px;
+      margin-right: 12px;
+      margin-left: 22px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      margin-top: 30px;
+      color: var(--Snow);
+      transform: translateX(-50px);
+    }
+
+    .buttonsDiv{
+      margin-top: 10px;
+    }
+  
+}
