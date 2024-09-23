@@ -140,8 +140,8 @@ function toggleComplete(index) {
             <option value="should">I Should</option>
             <option value="must">I Must</option>
           </select>
-        <button onClick={getHandleRemove(index)} className="removeBtn">Remove <Remove/></button>
-        <button onClick={() => toggleComplete(index)} className="completeBtn">Completed <Check/></button>
+        <button onClick={getHandleRemove(index)} className="removeBtn"><Remove/></button>
+        <button onClick={() => toggleComplete(index)} className="completeBtn"><Check/></button>
                 </div>
         
               </li>
